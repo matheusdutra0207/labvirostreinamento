@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: robot
+spec:
+  selector:
+    matchLabels:
+      app: robot
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: robot
+    spec:
+      containers:
+      - name: robot
+        image: matheusdutra0207/robot # my-user/my-application:container-version
+        ports:
+        - containerPort: 80
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway
+spec:
+  selector:
+    matchLabels:
+      app: gateway
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gateway
+    spec:
+      containers:
+      - name: gateway
+        image: matheusdutra0207/gateway
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: request
+spec:
+  selector:
+    matchLabels:
+      app: request
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: request
+    spec:
+      containers:
+      - name: request
+        image: matheusdutra0207/request
+        ports:
+        - containerPort: 80

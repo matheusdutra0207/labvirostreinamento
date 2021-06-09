@@ -1,0 +1,3 @@
+{
+    "broker_uri": "amqp://rabbitmq.default"  
+}
