@@ -7,6 +7,10 @@ Simulate move of a robot.
 
 ### Run the comands:
 
-- kubectl apply -f https://raw.githubusercontent.com/labviros/is-k8s-deployments/master/common/rabbitmq/rabbitmq.yaml
+```
+kubectl apply -f https://raw.githubusercontent.com/labviros/is-k8s-deployments/master/common/rabbitmq/rabbitmq.yaml
+```
 
-- kubectl apply -f deployment.yaml
+```
+kubectl apply -f deployment.yaml
+```
